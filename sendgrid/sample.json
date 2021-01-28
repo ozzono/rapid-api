@@ -1,0 +1,21 @@
+{
+    "personalizations": [
+        {
+            "to": [
+                {
+                    "email": "hello@world.com"
+                }
+            ],
+            "subject": "Hello, World!"
+        }
+    ],
+    "from": {
+        "email": "enel_invoice@automatic.com"
+    },
+    "content": [
+        {
+            "type": "text/plain",
+            "value": "Hello, World!"
+        }
+    ]
+}
