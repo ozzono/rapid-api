@@ -10,10 +10,13 @@ import (
 // MailData contains all the needed info to send an email
 type MailData struct {
 	Personalizations []Personalization `json:"personalizations"`
-	From             struct {
-		Email string `json:"email"`
-	} `json:"from"`
-	Content []Content `json:"content"`
+	From             From              `json:"from"`
+	Content          []Content         `json:"content"`
+}
+
+// From email sender
+type From struct {
+	Email string `json:"email"`
 }
 
 // Content uses text/plain as default Type
@@ -24,10 +27,13 @@ type Content struct {
 
 // Personalization ...
 type Personalization struct {
-	To []struct {
-		Email string `json:"email"`
-	} `json:"to"`
+	To      []To   `json:"to"`
 	Subject string `json:"subject"`
+}
+
+// To mail recipients
+type To struct {
+	Email string `json:"email"`
 }
 
 // Send 's the mail as customized by MailData
