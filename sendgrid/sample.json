@@ -10,12 +10,12 @@
         }
     ],
     "from": {
-        "email": "enel_invoice@automatic.com"
+        "email": "world@hello.com"
     },
     "content": [
         {
             "type": "text/plain",
-            "value": "Hello, World!"
+            "value": "rapid-mail/sendgrid test worked."
         }
     ]
 }

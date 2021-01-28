@@ -23,7 +23,8 @@ func Test(t *testing.T) {
 	// Set up custom config data
 	configData, err := readFile("config.json")
 	if err != nil {
-		t.Errorf("readFile %v", err)
+		t.Logf("readFile %v", err)
+		t.Errorf("unable to test: missing apikey")
 	}
 	t.Log("fetched config data")
 	config := map[string]string{}
